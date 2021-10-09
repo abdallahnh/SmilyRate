@@ -32,9 +32,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'SmilyRate/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'SmilyRate' => ['SmilyRate/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'SmilyRate' => ['SmilyRate/Assets/*.*']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
