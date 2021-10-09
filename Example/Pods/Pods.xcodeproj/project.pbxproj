@@ -560,8 +560,6 @@
 		82FABE0064DB9895F0972661130F5023 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A934A5CE2711DB9200192306 /* Model */,
-				A934A5CC2711DB9200192306 /* View */,
 				F1A40966FDD8C6A5B120534734292DA7 /* SmilyRate */,
 			);
 			name = "Development Pods";
@@ -661,6 +659,8 @@
 		F1A40966FDD8C6A5B120534734292DA7 /* SmilyRate */ = {
 			isa = PBXGroup;
 			children = (
+				A934A5CE2711DB9200192306 /* Model */,
+				A934A5CC2711DB9200192306 /* View */,
 				A934A5CA2711DB7E00192306 /* SmilyRateView.swift */,
 				CBAD953C5E22CCF2AE82C357C5371FA0 /* ReplaceMe.swift */,
 				9649CF63A6A362424FC23010793E3240 /* Pod */,
