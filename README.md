@@ -22,7 +22,7 @@ pod 'SmilyRate'
 
 ## Author
 
-abdallahnh, anehme@totersapp.com
+abdallahnh, abdallah.nh@gmail.com
 
 ## License
 

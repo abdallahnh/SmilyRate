@@ -1,15 +1,15 @@
 {
   "name": "SmilyRate",
   "version": "0.1.0",
-  "summary": "A short description of SmilyRate.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "SmilyRate Model usinig Faces and not stars",
+  "description": "A better library to rate user experience using Faces and not stars",
   "homepage": "https://github.com/abdallahnh/SmilyRate",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "abdallahnh": "anehme@totersapp.com"
+    "abdallahnh": "abdallah.nh@gmail.com"
   },
   "source": {
     "git": "https://github.com/abdallahnh/SmilyRate.git",
