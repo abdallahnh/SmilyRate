@@ -18,10 +18,5 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "SmilyRate/Classes/**/*",
-  "resource_bundles": {
-    "SmilyRate": [
-      "SmilyRate/Assets/*.*"
-    ]
-  }
+  "source_files": "SmilyRate/Classes/**/*.{Swift}"
 }

@@ -30,11 +30,11 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'SmilyRate/Classes/**/*'
-  
-   s.resource_bundles = {
-     'SmilyRate' => ['SmilyRate/Assets/*.*']
-   }
+  s.source_files = 'SmilyRate/Classes/**/*.{Swift}'
+
+  # s.resource_bundles = {
+  #   'SmilyRate' => ['SmilyRate/Assets/*.png']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
