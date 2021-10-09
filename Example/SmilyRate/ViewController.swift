@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import SmilyRate
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var smilyRateView: SmilyRateView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.smilyRateView = SmilyRateView()
+        //let smilModel = SmilModel(
+        //self.smilyRateView.setSmiling(smiling: [SmilModel])
     }
 
     override func didReceiveMemoryWarning() {

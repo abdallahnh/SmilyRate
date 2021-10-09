@@ -89,8 +89,9 @@
 		A7F5B07BF96955EFDC9106335235EDB2 /* QuickTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A9D92F5403AECF938E620FD0DA61 /* QuickTestSuite.swift */; };
 		A85403E9F906C2E74B26DFB29F83C484 /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EC1764F800A0EDC4C05956522C26E7 /* AllPass.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		A92B3AAEDFE17B7A68FF4FDEEDC2CF54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
-		A934A5C22711D5E200192306 /* SmilyRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A934A5C02711D5E200192306 /* SmilyRateView.swift */; };
-		A934A5C32711D5E200192306 /* SmilyRateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A934A5C12711D5E200192306 /* SmilyRateView.xib */; };
+		A934A5CB2711DB7E00192306 /* SmilyRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A934A5CA2711DB7E00192306 /* SmilyRateView.swift */; };
+		A934A5D02711DB9200192306 /* ANStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A934A5CD2711DB9200192306 /* ANStackView.swift */; };
+		A934A5D12711DB9200192306 /* SmilModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A934A5CF2711DB9200192306 /* SmilModel.swift */; };
 		AA30AF4811BF289F891D60B772ABC7F6 /* Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48030673D1C6A4142D109D569DAE8BBF /* Equal.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		AD3F3DEA678B9C0A1C4F0EF79BFB7505 /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4C5D377663254ACAC35F9513AEAD2 /* MatcherProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		AF60C00928A7AFE04E374B620EEA5F49 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6BBF570610A2A47EAD3F82A0BEBD6F /* Filter.swift */; };
@@ -262,8 +263,9 @@
 		A32B4D4671D06A5EA59461B01C7699AD /* MatcherFunc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherFunc.swift; path = Sources/Nimble/Matchers/MatcherFunc.swift; sourceTree = "<group>"; };
 		A508FA505DD93EA63E80B33C57C3E77F /* Quick.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Quick.h; path = Sources/QuickObjectiveC/Quick.h; sourceTree = "<group>"; };
 		A83B46185F327212F381C57522C0BC72 /* BeVoid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeVoid.swift; path = Sources/Nimble/Matchers/BeVoid.swift; sourceTree = "<group>"; };
-		A934A5C02711D5E200192306 /* SmilyRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmilyRateView.swift; path = SmilyRate/SmilyRateView.swift; sourceTree = "<group>"; };
-		A934A5C12711D5E200192306 /* SmilyRateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SmilyRateView.xib; path = SmilyRate/SmilyRateView.xib; sourceTree = "<group>"; };
+		A934A5CA2711DB7E00192306 /* SmilyRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmilyRateView.swift; path = SmilyRate/SmilyRateView.swift; sourceTree = "<group>"; };
+		A934A5CD2711DB9200192306 /* ANStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANStackView.swift; sourceTree = "<group>"; };
+		A934A5CF2711DB9200192306 /* SmilModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmilModel.swift; sourceTree = "<group>"; };
 		A9F62A0EE4703C223EEA259AF8EEA0BB /* XCTestObservationCenter+Register.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestObservationCenter+Register.m"; path = "Sources/NimbleObjectiveC/XCTestObservationCenter+Register.m"; sourceTree = "<group>"; };
 		AA3D9DF8285942237E49C794E214A4FE /* BeIdenticalTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeIdenticalTo.swift; path = Sources/Nimble/Matchers/BeIdenticalTo.swift; sourceTree = "<group>"; };
 		AAC9E5AF3B73131DD27CE98906A6ED4B /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Sources/Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
@@ -558,6 +560,8 @@
 		82FABE0064DB9895F0972661130F5023 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
+				A934A5CE2711DB9200192306 /* Model */,
+				A934A5CC2711DB9200192306 /* View */,
 				F1A40966FDD8C6A5B120534734292DA7 /* SmilyRate */,
 			);
 			name = "Development Pods";
@@ -609,6 +613,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A934A5CC2711DB9200192306 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A934A5CD2711DB9200192306 /* ANStackView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A934A5CE2711DB9200192306 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A934A5CF2711DB9200192306 /* SmilModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AA0D40AB012EEBE0B918BBF49F1C3A90 /* Pods-SmilyRate_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -641,8 +661,7 @@
 		F1A40966FDD8C6A5B120534734292DA7 /* SmilyRate */ = {
 			isa = PBXGroup;
 			children = (
-				A934A5C02711D5E200192306 /* SmilyRateView.swift */,
-				A934A5C12711D5E200192306 /* SmilyRateView.xib */,
+				A934A5CA2711DB7E00192306 /* SmilyRateView.swift */,
 				CBAD953C5E22CCF2AE82C357C5371FA0 /* ReplaceMe.swift */,
 				9649CF63A6A362424FC23010793E3240 /* Pod */,
 				42F29AF8238732E2104CEE870B6EA2AA /* Support Files */,
@@ -867,7 +886,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A934A5C32711D5E200192306 /* SmilyRateView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,8 +904,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A934A5D12711DB9200192306 /* SmilModel.swift in Sources */,
+				A934A5D02711DB9200192306 /* ANStackView.swift in Sources */,
 				45C06AF00A7DC1E707706D00DCD63458 /* ReplaceMe.swift in Sources */,
-				A934A5C22711D5E200192306 /* SmilyRateView.swift in Sources */,
+				A934A5CB2711DB7E00192306 /* SmilyRateView.swift in Sources */,
 				56256B91256CE89AE344226D59A428C7 /* SmilyRate-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
