@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +21,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8k-OP-ud6" customClass="SmilyRateView" customModule="SmilyRate">
                                 <rect key="frame" x="20" y="105" width="388" height="128"/>
-                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="uZd-2S-kCA"/>
                                 </constraints>
@@ -36,7 +35,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="smilyRateView" destination="p8k-OP-ud6" id="2p7-Ro-4Lk"/>
+                        <outlet property="smilyRateView" destination="p8k-OP-ud6" id="mx1-m3-fWP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -44,9 +43,4 @@
             <point key="canvasLocation" x="138" y="133"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

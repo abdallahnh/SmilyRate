@@ -10,5 +10,6 @@ target 'SmilyRate_Example' do
 
     pod 'Quick', '~> 2.2.0'
     pod 'Nimble', '~> 9.0.0'
+    pod 'SnapKit'
   end
 end
