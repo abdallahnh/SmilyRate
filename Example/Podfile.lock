@@ -1,0 +1,31 @@
+PODS:
+  - Nimble (9.0.1)
+  - Quick (2.2.1)
+  - SmilyRate (0.1.0)
+  - SnapKit (4.2.0)
+
+DEPENDENCIES:
+  - Nimble (~> 9.0.0)
+  - Quick (~> 2.2.0)
+  - SmilyRate (from `../`)
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
+    - SnapKit
+
+EXTERNAL SOURCES:
+  SmilyRate:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 7bed62ffabd6dbfe05f5925cbc43722533248990
+  Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
+  SmilyRate: b8200e425f368598062cbf268399c355384fc98d
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+
+PODFILE CHECKSUM: 8753721a1916c0be3a17ef2b85ada71bfd57941d
+
+COCOAPODS: 1.10.1
