@@ -1,0 +1,22 @@
+{
+  "name": "SmilyRate",
+  "version": "0.1.0",
+  "summary": "A short description of SmilyRate.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/abdallahnh/SmilyRate",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "abdallahnh": "anehme@totersapp.com"
+  },
+  "source": {
+    "git": "https://github.com/abdallahnh/SmilyRate.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "SmilyRate/Classes/**/*"
+}

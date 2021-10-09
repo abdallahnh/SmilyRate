@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A9812FBB13469AEEADB3F38 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1A9812FBB13469AEEADB3F38 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		581A6C3F64D348A69A18EAB3 /* Pods-SmilyRate_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmilyRate_Tests.release.xcconfig"; path = "Target Support Files/Pods-SmilyRate_Tests/Pods-SmilyRate_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SmilyRate_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmilyRate_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,8 +44,8 @@
 		8203C55CFFDCF48CCC63642B /* Pods-SmilyRate_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmilyRate_Example.release.xcconfig"; path = "Target Support Files/Pods-SmilyRate_Example/Pods-SmilyRate_Example.release.xcconfig"; sourceTree = "<group>"; };
 		89FB4CC07720B1431C193A48 /* Pods-SmilyRate_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmilyRate_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SmilyRate_Tests/Pods-SmilyRate_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		97BF85202DFE033E5DFEF8E7 /* Pods_SmilyRate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmilyRate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4E86E06938A3180F48B725E /* SmilyRate.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SmilyRate.podspec; path = ../SmilyRate.podspec; sourceTree = "<group>"; };
-		BC50494055D4BF4AD1B22CE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B4E86E06938A3180F48B725E /* SmilyRate.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SmilyRate.podspec; path = ../SmilyRate.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC50494055D4BF4AD1B22CE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D0B447BFC8E5995AA1AB9297 /* Pods-SmilyRate_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmilyRate_Example.debug.xcconfig"; path = "Target Support Files/Pods-SmilyRate_Example/Pods-SmilyRate_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +156,6 @@
 				89FB4CC07720B1431C193A48 /* Pods-SmilyRate_Tests.debug.xcconfig */,
 				581A6C3F64D348A69A18EAB3 /* Pods-SmilyRate_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
