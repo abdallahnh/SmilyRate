@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SmilyRate'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'SmilyRate Model usinig Faces and not stars'
 
 # This description is used to generate tags and improve search results.
@@ -32,11 +32,12 @@ Pod::Spec.new do |s|
 
   s.source_files = 'SmilyRate/Classes/**/*.{Swift}'
 
-  # s.resource_bundles = {
-  #   'SmilyRate' => ['SmilyRate/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'SmilyRate' => ['SmilyRate/Assets/**/*.{pdf,png}']
+   }
 
+   s.swift_version = '5.0'
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # s.dependency 'SnapKit', '~> 5.0.1'
 end
