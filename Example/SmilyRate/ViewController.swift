@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var smilyRateView: SmilyRateView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nib.\
+        smilyRateView.value = 1
         smilyRateView.didTouch = { value in
             print("value: \(value)")
         }
