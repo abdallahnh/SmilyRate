@@ -31,13 +31,13 @@ public class SmilyRateView: UIView {
     public func setSmiling(smiling: [SmilModel]){
         self.smiling = smiling
         self.stackView.removeAllArrangedSubviews()
-        for (index, smil) in self.smiling.enumerated() {
+        for  smil in self.smiling {
             let stackView = ANStackView(style: .v(distribution: .fillEqually, spacing: 2)).view
             let imageView = UIImageView(image: smil.image)
             let containerView = UIView()
             let label = UILabel()
             let button = UIButton()
-            button.tag = index + 1
+            button.tag = Int(smil.rateValue)
             label.font = UIFont.systemFont(ofSize: 11)
             label.numberOfLines = 2
             label.lineBreakMode = .byWordWrapping
@@ -93,20 +93,20 @@ public class SmilyRateView: UIView {
         _ = constraints.map({$0.isActive = true})
     }
     private func populateDefaultData(){
-        let sm1 = SmilModel(image: UIImage(imageLiteralResourceName: "1"), title: "Very Satisfied", selectedColor: .getRatingColor(BasedOn: self.value))
-        let sm2 = SmilModel(image: UIImage(imageLiteralResourceName: "2"), title: "Satisfied", selectedColor: .getRatingColor(BasedOn: self.value) )
-        let sm3 = SmilModel(image: UIImage(imageLiteralResourceName: "3"), title: "Neutral", selectedColor: .getRatingColor(BasedOn: self.value))
-        let sm4 = SmilModel(image: UIImage(imageLiteralResourceName: "4"), title: "Dissatisfied", selectedColor: .getRatingColor(BasedOn: self.value))
-        let sm5 = SmilModel(image: UIImage(imageLiteralResourceName: "5"), title: "Very Dissatisfied", selectedColor: .getRatingColor(BasedOn: self.value))
+        let sm1 = SmilModel(image: UIImage(imageLiteralResourceName: "1"), title: "Very Satisfied", selectedColor: .getRatingColor(BasedOn: self.value), rateValue: 5.0)
+        let sm2 = SmilModel(image: UIImage(imageLiteralResourceName: "2"), title: "Satisfied", selectedColor: .getRatingColor(BasedOn: self.value), rateValue: 4.0 )
+        let sm3 = SmilModel(image: UIImage(imageLiteralResourceName: "3"), title: "Neutral", selectedColor: .getRatingColor(BasedOn: self.value), rateValue: 3)
+        let sm4 = SmilModel(image: UIImage(imageLiteralResourceName: "4"), title: "Dissatisfied", selectedColor: .getRatingColor(BasedOn: self.value), rateValue: 2)
+        let sm5 = SmilModel(image: UIImage(imageLiteralResourceName: "5"), title: "Very Dissatisfied", selectedColor: .getRatingColor(BasedOn: self.value), rateValue: 1)
 
         self.setSmiling(smiling: [sm1, sm2, sm3, sm4, sm5])
     }
     private func update(){
         var values = [SmilModel]()
-        for (index, smil) in self.smiling.enumerated(){
-            let tag = Double(index + 1)
+        for smil in self.smiling{
+            let tag = smil.rateValue
             let selectedColor:UIColor = tag == self.value ? UIColor.getRatingColor(BasedOn: self.value): UIColor.getRatingColor(BasedOn: 0)
-            values.append( SmilModel(image: smil.image.maskWithColor(color:selectedColor) ?? smil.image, title: smil.title, selectedColor:selectedColor))
+            values.append( SmilModel(image: smil.image.maskWithColor(color:selectedColor) ?? smil.image, title: smil.title, selectedColor:selectedColor, rateValue: smil.rateValue))
         }
         self.smiling.removeAll()
         self.setSmiling(smiling: values)
@@ -137,11 +137,11 @@ extension UIColor{
         switch rating {
         case 0 :
             return ratingEmpty()
-        case 3.75...5.0:
+        case  1.0..<2.5:
             return ratingRed()
         case 2.5..<3.75:
             return ratingYellow()
-        case  1.0..<2.5:
+        case 3.75...5.0:
             return ratingGreen()
         default:
             return ratingEmpty()
