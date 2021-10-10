@@ -12,7 +12,7 @@ public class SmilyRateView: UIView {
     // MARK: - Var
     private var stackView: UIStackView = UIStackView()
     private var smiling: [SmilModel]!
-    private var value: Double! = 0 {
+    public var value: Double! = 0 {
         didSet {
             self.update()
             didTouch(self.value)
