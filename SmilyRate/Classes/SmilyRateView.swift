@@ -10,7 +10,7 @@ import UIKit
 public class SmilyRateView: UIView {
 
     // MARK: - Var
-    private var stackView: UIStackView!
+    private var stackView: UIStackView = UIStackView()
     private var smiling: [SmilModel]!
     private var value: Double! = 0 {
         didSet {
@@ -30,7 +30,7 @@ public class SmilyRateView: UIView {
     // MARK: - Public Functions
     public func setSmiling(smiling: [SmilModel]){
         self.smiling = smiling
-        self.stackView?.removeAllArrangedSubviews()
+        self.stackView.removeAllArrangedSubviews()
         for (index, smil) in self.smiling.enumerated() {
             let stackView = ANStackView(style: .v(distribution: .fillEqually, spacing: 2)).view
             let imageView = UIImageView(image: smil.image)
@@ -65,7 +65,7 @@ public class SmilyRateView: UIView {
             NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: containerView, attribute: .width, multiplier: 1, constant: 0).isActive = true
             NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: containerView, attribute: .height, multiplier: 1, constant: 0).isActive = true
 
-            self.stackView?.addArrangedSubview(stackView)
+            self.stackView.addArrangedSubview(stackView)
 
 
             button.addTarget(self, action: #selector(buttonAction(button:)), for: .touchUpInside)
