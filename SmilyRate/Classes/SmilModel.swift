@@ -7,11 +7,13 @@
 
 import Foundation
 public final class SmilModel{
-    let image: UIImage!
+    var image: UIImage!
     let title: String!
+    var selectedColor: UIColor!
 
-    public init(image: UIImage, title: String){
+    public init(image: UIImage, title: String, selectedColor: UIColor){
         self.image = image
         self.title = title
+        self.selectedColor = selectedColor
     }
 }
