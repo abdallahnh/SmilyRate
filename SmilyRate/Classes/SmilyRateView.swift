@@ -6,16 +6,33 @@
 //
 
 import UIKit
-
+@IBDesignable
 public class SmilyRateView: UIView {
 
     // MARK: - Var
     private var stackView: UIStackView = UIStackView()
-    private var smiling: [SmilModel]!
+    private var smiling = [SmilModel]()
+    private var smilingImages = [UIImage]()
+    private var _selectedColor: UIColor = UIColor(rgb: 0x076e5d)
+    private var _unSelectedColor: UIColor = UIColor(rgb: 0x076e5d).withAlphaComponent(0.3)
+
     public var value: Double! = 0 {
         didSet {
             self.update()
             didTouch(self.value)
+        }
+    }
+    // MARK: - Properties
+    @IBInspectable
+    public var selectedColor: UIColor = UIColor(rgb: 0x076e5d){
+        didSet{
+            self._selectedColor = self.selectedColor
+        }
+    }
+    @IBInspectable
+    public var unSelectedColor: UIColor = UIColor(rgb: 0x076e5d).withAlphaComponent(0.3){
+        didSet{
+            self._unSelectedColor = self.unSelectedColor
         }
     }
 
@@ -32,6 +49,7 @@ public class SmilyRateView: UIView {
         self.smiling = smiling
         self.stackView.removeAllArrangedSubviews()
         for  smil in self.smiling {
+            self.smilingImages.append(smil.image)
             let stackView = ANStackView(style: .v(distribution: .fillEqually, spacing: 2)).view
             let imageView = UIImageView(image: smil.image)
             let containerView = UIView()
@@ -94,58 +112,58 @@ public class SmilyRateView: UIView {
     }
     private func populateDefaultData(){
         guard self.smiling.count == 0 else { return }
-        let sm1 = SmilModel(image: UIImage(imageLiteralResourceName: "1"), title: "Very Satisfied", selectedColor: .getRatingColor(BasedOn: self.value), rateValue: 5.0)
-        let sm2 = SmilModel(image: UIImage(imageLiteralResourceName: "2"), title: "Satisfied", selectedColor: .getRatingColor(BasedOn: self.value), rateValue: 4.0 )
-        let sm3 = SmilModel(image: UIImage(imageLiteralResourceName: "3"), title: "Neutral", selectedColor: .getRatingColor(BasedOn: self.value), rateValue: 3)
-        let sm4 = SmilModel(image: UIImage(imageLiteralResourceName: "4"), title: "Dissatisfied", selectedColor: .getRatingColor(BasedOn: self.value), rateValue: 2)
-        let sm5 = SmilModel(image: UIImage(imageLiteralResourceName: "5"), title: "Very Dissatisfied", selectedColor: .getRatingColor(BasedOn: self.value), rateValue: 1)
+        self.smilingImages = [UIImage(imageLiteralResourceName: "1"),
+                        UIImage(imageLiteralResourceName: "2"),
+                        UIImage(imageLiteralResourceName: "3"),
+                        UIImage(imageLiteralResourceName: "4"),
+                        UIImage(imageLiteralResourceName: "5")]
+        let sm1 = SmilModel(image: self.getImage(BasedOn: self.value, andImage: self.smilingImages[0]),
+                            title: "Very Satisfied",
+                            selectedColor: self.getRatingColor(BasedOn: self.value), rateValue: 5.0)
+        let sm2 = SmilModel(image:  self.getImage(BasedOn: self.value, andImage:  self.smilingImages[1]),
+                            title: "Satisfied",
+                            selectedColor: self.getRatingColor(BasedOn: self.value), rateValue: 4.0 )
+        let sm3 = SmilModel(image:  self.getImage(BasedOn: self.value, andImage:  self.smilingImages[2]),
+                            title: "Neutral",
+                            selectedColor: self.getRatingColor(BasedOn: self.value), rateValue: 3.0)
+        let sm4 = SmilModel(image:  self.getImage(BasedOn: self.value, andImage:  self.smilingImages[3]),
+                            title: "Dissatisfied",
+                            selectedColor: self.getRatingColor(BasedOn: self.value), rateValue: 2.0)
+        let sm5 = SmilModel(image:  self.getImage(BasedOn: self.value, andImage:  self.smilingImages[4]),
+                            title: "Very Dissatisfied",
+                            selectedColor: self.getRatingColor(BasedOn: self.value), rateValue: 1.0)
 
         self.setSmiling(smiling: [sm1, sm2, sm3, sm4, sm5])
     }
     private func update(){
         var values = [SmilModel]()
-        for smil in self.smiling{
-            let tag = smil.rateValue
-            let selectedColor:UIColor = tag == self.value ? UIColor.getRatingColor(BasedOn: self.value): UIColor.getRatingColor(BasedOn: 0)
-            values.append( SmilModel(image: smil.image.maskWithColor(color:selectedColor) ?? smil.image, title: smil.title, selectedColor:selectedColor, rateValue: smil.rateValue))
+        for (index,smil) in self.smiling.enumerated(){
+            let image = self.smilingImages[index]
+            values.append( SmilModel(image: self.getImage(BasedOn: smil.rateValue, andImage: image), title: smil.title, selectedColor:self.getRatingColor(BasedOn: smil.rateValue), rateValue: smil.rateValue))
         }
         self.smiling.removeAll()
         self.setSmiling(smiling: values)
     }
-
+    private func getRatingColor(BasedOn value: Double) -> UIColor {
+        if value == self.value {
+            return self._selectedColor
+        }
+        else{
+            return self._unSelectedColor
+        }
+    }
+    private func getImage(BasedOn value: Double, andImage image: UIImage) -> UIImage {
+        guard self.value > 0  else { return image}
+        if value == self.value {
+            return image.maskWithColor(color: self._selectedColor) ?? image
+        }
+        else{
+            return  image.maskWithColor(color: self.unSelectedColor)  ?? image
+        }
+    }
+   
     @objc private func buttonAction(button: UIButton){
         self.value = Double(button.tag)
     }
 
-}
-extension UIColor{
-    class func ratingRed() -> UIColor {
-        UIColor(red: 192 / 255, green: 43 / 255, blue: 30 / 255, alpha: 1.0)
-    }
-
-    class func ratingYellow() -> UIColor {
-        UIColor(red: 246 / 255, green: 166 / 255, blue: 23 / 255, alpha: 1.0)
-    }
-
-    class func ratingGreen() -> UIColor {
-        UIColor(red: 4 / 255, green: 113 / 255, blue: 97 / 255, alpha: 1.0)
-    }
-
-    class func ratingEmpty() -> UIColor {
-        .black
-    }
-    class func getRatingColor(BasedOn rating: Double) -> UIColor {
-        switch rating {
-        case 0 :
-            return ratingEmpty()
-        case  1.0..<2.5:
-            return ratingRed()
-        case 2.5..<3.75:
-            return ratingYellow()
-        case 3.75...5.0:
-            return ratingGreen()
-        default:
-            return ratingEmpty()
-        }
-    }
 }
