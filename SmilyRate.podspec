@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SmilyRate'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'SmilyRate Model usinig Faces and not stars'
 
 # This description is used to generate tags and improve search results.

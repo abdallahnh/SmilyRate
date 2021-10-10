@@ -114,6 +114,7 @@
 		A6CE2E672C8EB4DF57485428AFD64A3C /* URL+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F193608E19A4DF99E3FD3E355DEBD5 /* URL+FileName.swift */; };
 		A7F5B07BF96955EFDC9106335235EDB2 /* QuickTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6BB81BD7A77978AB426EA7E4DD345A /* QuickTestSuite.swift */; };
 		A85403E9F906C2E74B26DFB29F83C484 /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88E903252DA70B1F8EC8065BA14CC9C /* AllPass.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		A924282F27138F0600D703F1 /* UIColor+Hexa.swift in Sources */ = {isa = PBXBuildFile; fileRef = A924282E27138F0600D703F1 /* UIColor+Hexa.swift */; };
 		A92B3AAEDFE17B7A68FF4FDEEDC2CF54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
 		A9B29739271297BA00483B71 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B29738271297BA00483B71 /* UIImageExtension.swift */; };
 		AA30AF4811BF289F891D60B772ABC7F6 /* Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E356816B2632B984AAEC6866097B16B /* Equal.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -336,6 +337,7 @@
 		A59EEE27E0DA69C4CB867E8EF2A426AC /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
 		A72F6EEE7DA73E799E447A1D1485CFA7 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		A7DDFE8D919E4C035BC1DAE4FE0A2538 /* String+C99ExtendedIdentifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+C99ExtendedIdentifier.swift"; path = "Sources/Quick/String+C99ExtendedIdentifier.swift"; sourceTree = "<group>"; };
+		A924282E27138F0600D703F1 /* UIColor+Hexa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Hexa.swift"; path = "SmilyRate/Classes/UIColor+Hexa.swift"; sourceTree = "<group>"; };
 		A9B29738271297BA00483B71 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = SmilyRate/Classes/UIImageExtension.swift; sourceTree = "<group>"; };
 		ABF57A1A7203B92B74B55AC6D122E428 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
 		AC45F7760EA8A9B68522D6F29EC00957 /* QuickTestObservation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTestObservation.swift; path = Sources/Quick/QuickTestObservation.swift; sourceTree = "<group>"; };
@@ -710,6 +712,7 @@
 				B42F11A5410663E43332E4B9EEE2C1E3 /* Pod */,
 				DC1D26D73A79EA9EFE32F12E7BE81F9D /* Support Files */,
 				A9B29738271297BA00483B71 /* UIImageExtension.swift */,
+				A924282E27138F0600D703F1 /* UIColor+Hexa.swift */,
 			);
 			name = SmilyRate;
 			path = ../..;
@@ -1225,6 +1228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9B29739271297BA00483B71 /* UIImageExtension.swift in Sources */,
+				A924282F27138F0600D703F1 /* UIColor+Hexa.swift in Sources */,
 				CBDFEA8A81C914EF5447DAA866E9C16D /* ANStackView.swift in Sources */,
 				7C5F03E84E6C40C89B19E79E2D0D2EA6 /* SmilModel.swift in Sources */,
 				61AD4FC1E8037201ED32565534D1BD73 /* SmilyRate-dummy.m in Sources */,
