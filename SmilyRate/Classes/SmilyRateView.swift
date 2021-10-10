@@ -93,6 +93,7 @@ public class SmilyRateView: UIView {
         _ = constraints.map({$0.isActive = true})
     }
     private func populateDefaultData(){
+        guard self.smiling.count == 0 else { return }
         let sm1 = SmilModel(image: UIImage(imageLiteralResourceName: "1"), title: "Very Satisfied", selectedColor: .getRatingColor(BasedOn: self.value), rateValue: 5.0)
         let sm2 = SmilModel(image: UIImage(imageLiteralResourceName: "2"), title: "Satisfied", selectedColor: .getRatingColor(BasedOn: self.value), rateValue: 4.0 )
         let sm3 = SmilModel(image: UIImage(imageLiteralResourceName: "3"), title: "Neutral", selectedColor: .getRatingColor(BasedOn: self.value), rateValue: 3)
