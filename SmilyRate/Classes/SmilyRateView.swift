@@ -19,7 +19,6 @@ public class SmilyRateView: UIView {
     public var value: Double! = 0 {
         didSet {
             self.update()
-            didTouch(self.value)
         }
     }
     // MARK: - Properties
@@ -164,6 +163,7 @@ public class SmilyRateView: UIView {
    
     @objc private func buttonAction(button: UIButton){
         self.value = Double(button.tag)
+        self.didTouch(self.value)
     }
 
 }
