@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.\
-        smilyRateView.value = 5
+        smilyRateView.value = -1
         smilyRateView.didTouch = { value in
             print("value: \(value)")
         }
