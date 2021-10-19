@@ -137,7 +137,7 @@ public class SmilyRateView: UIView {
     private func update(){
         var values = [SmilModel]()
         for (index,smil) in self.smiling.enumerated(){
-            let image = self.smilingImages[index]
+            let image = self.smilingImages[index].imageWithColor(self.selectedColor)
             values.append( SmilModel(image: self.getImage(BasedOn: smil.rateValue, andImage: image), title: smil.title, selectedColor:self.getRatingColor(BasedOn: smil.rateValue), rateValue: smil.rateValue))
         }
         self.smiling.removeAll()
