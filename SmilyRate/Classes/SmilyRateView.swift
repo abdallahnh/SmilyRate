@@ -144,6 +144,9 @@ public class SmilyRateView: UIView {
         self.setSmiling(smiling: values)
     }
     private func getRatingColor(BasedOn value: Double) -> UIColor {
+        guard value > 0 else {
+            return self._unSelectedColor
+        }
         if value == self.value {
             return self._selectedColor
         }
@@ -152,12 +155,12 @@ public class SmilyRateView: UIView {
         }
     }
     private func getImage(BasedOn value: Double, andImage image: UIImage) -> UIImage {
-        guard self.value > 0  else { return image}
+        guard self.value > 0  else { return image.imageWithColor(self.unSelectedColor)}
         if value == self.value {
-            return image.maskWithColor(color: self._selectedColor) ?? image
+            return image.imageWithColor(self._selectedColor)
         }
         else{
-            return  image.maskWithColor(color: self.unSelectedColor)  ?? image
+            return  image.imageWithColor(self.unSelectedColor)
         }
     }
    
